@@ -24,4 +24,4 @@ steps:
   inputs:
     files: '**/*.jar'
     serviceEndpoint: 'azurechinablob'
-    remotePath: upload/$(Build.BuildId)/
+    options: '-H "x-ms-date: $(date -u)" -H "x-ms-blob-type: BlockBlob"'
