@@ -22,5 +22,6 @@ steps:
     goals: 'package'
 - task: cURLUploader@2
   inputs:
-    files: '*.jar'
+    files: '**/*.jar'
     serviceEndpoint: 'azurechinablob'
+    remotePath: upload/$(Build.BuildId)/
