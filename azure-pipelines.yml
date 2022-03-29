@@ -25,3 +25,5 @@ steps:
     files: '**/*.jar'
     serviceEndpoint: 'azurechinablob'
     options: '-H "x-ms-date: $(date -u)" -H "x-ms-blob-type: BlockBlob"'
+    authType: ServiceEndpoint
+    remotePath: /
