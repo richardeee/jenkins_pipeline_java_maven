@@ -32,4 +32,4 @@ steps:
     targetType: 'inline'
     script: |
       # Upload File to Blob
-      curl -H "x-ms-blob-type: BlockBlob" --upload-file '/home/vsts/work/1/s/target/hello-0.0.1-SNAPSHOT.jar' --url "https://sgsfilesnew.blob.core.chinacloudapi.cn/devops/hello-0.0.1-SNAPSHOT.jar?sp=racwl&st=2022-03-29T07:30:29Z&se=2023-02-01T15:30:29Z&spr=https&sv=2020-08-04&sr=c&sig=hEO36H%2BTbh1ZE1O733GA51iSTOJAjxM%2FeqEF1aKGVh8%3D"
+      curl -H "x-ms-blob-type: BlockBlob" --upload-file '/home/vsts/work/1/s/target/hello-0.0.1-SNAPSHOT.jar' --url "https://sgsfilesnew.blob.core.chinacloudapi.cn/devops/hello-0.0.1-SNAPSHOT.jar?$(SGS-BLOB-SAS-TOKEN)"
